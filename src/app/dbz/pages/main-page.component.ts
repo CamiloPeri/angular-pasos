@@ -10,7 +10,7 @@ export class MainPageComponent {
   constructor(private dbz_service: DbzService) {}
 
   get characters(): Character[] {
-    return { ...this.dbz_service.characters };
+    return this.dbz_service.characters;
   }
 
   onDeleteCharacter(id: string): void {
